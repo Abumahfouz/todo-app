@@ -152,7 +152,7 @@ form button:hover {
 
 .container {
     min-height: 85vh;
-    background-image: url(/img/clear-bubble.png);
+    background-image: url(clear-bubble.png);
     background-position: center;
     background-size: cover;
     animation: bubbles 5s ease-in-out infinite;
