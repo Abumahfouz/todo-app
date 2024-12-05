@@ -10,6 +10,7 @@
     --dark-text: #000025;
     --input: #09273b;
     --overlay: rgba(0,0,25,0.4);
+    --footer: #01e4cd;
 }
 *{
     padding: 0;
@@ -38,6 +39,7 @@ body {
     height: 100vh;
 }
 header {
+    background-color: var(--white);
     justify-content: center;
     padding: 2rem;
     font-size: 1.5rem;
@@ -46,11 +48,9 @@ header {
     /* gap */
 }
 header h1{
-    color: var(--white);
+    color: var(--dark-text);
 }
-.container {
-    min-height: 85vh;
-}
+
 .logo {
     width: 5.5rem;
     height: 5.5rem;
@@ -99,6 +99,44 @@ form button:hover {
         background-position: 0 50%;
     }
 }
+@keyframes fall {
+    0% {
+        transform: translateX(10%);
+    }
+    50% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+@keyframes bubbles {
+    0% {
+        background-position-x: 0%;
+        background-position-y: 10%;
+        /* transform: rotateX('30'); */
+    }
+    20% {
+        background-position-x: 10%;
+        background-position-y: 20%;
+    }
+    40% {
+        background-position-x: 20%;
+        background-position-y: 40%;
+    }
+    60% {
+        background-position-x: 60%;
+        background-position-y: 20%;
+    }
+    80% {
+        background-position-x: 40%;
+        background-position-y: 10%;
+    }
+    100% {
+        background-position-x: 10%;
+        background-position-y: 0%;
+    }
+}
 .material-symbols-outlined {
   color: var(--white);
   font-variation-settings:
@@ -109,7 +147,15 @@ form button:hover {
 }
 .done {
     text-decoration: line-through;
-    opacity: 0.5;
+    opacity: 0.1;
+}
+
+.container {
+    min-height: 85vh;
+    background-image: url(/img/clear-bubble.png);
+    background-position: center;
+    background-size: cover;
+    animation: bubbles 5s ease-in-out infinite;
 }
 
 select {
@@ -185,16 +231,16 @@ select option {
     pointer-events: none;
 }
 .fall {
-    opacity: 0;
+    opacity: 0.1;
     animation: fall 1s ease-in-out forwards;
 }
 footer {
     position: relative;
     max-width: 100vw;
-    background: url('https://plus.unsplash.com/premium_photo-1667811946004-7c03b11fcd11?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat;
     background-position: top;
     background-size: cover;
     min-height: 15vh;
+    background-color: var(--footer);
 }
 footer .overlay {
     background-color: var(--overlay);

@@ -56,9 +56,12 @@ function actionEvent(e) {
         localStorage.setItem('deleteBtn', actionBtn );
         const todo = actionBtn.parentElement;
         todo.classList.add('fall');
-        todo.addEventListener('transitionend', ()=>{
+        setTimeout(() => {
             todo.remove();
-        });
+        }, 1000);
+        // todo.addEventListener('transitionend', ()=>{
+        //     todo.remove(); 
+        // })
     }
 
     if(actionBtn.classList[0] === "complete-button") {
