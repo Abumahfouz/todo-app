@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add_task" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=calendar_month" />
+    <script src="https://kit.fontawesome.com/cce7b28744.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/4472/4472515.png " alt="">
+        </div>
+        <h1>TO-DO</h1>
+    </header>
+    <form action="#">
+        <input type="text" id="todo-input">
+        <button id="todo-button">
+            <i class="fa-regular fa-calendar-plus"></i>
+        </button>
+
+        <div class="filter-records">
+            <select name="todo-status" id="todo-status">
+                <option value="all">All</option>
+                <option value="done">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+        </div>
+    </form>
+    <div class="todo-container">
+        <ul class="todos"></ul>
+    </div>
+
+    <div class="todo-records"></div>
+</div>
+<footer>
+    <p class="overlay"></p>
+    <div class="quick-links">
+        <ul>
+            <li><a href="https://x.com/mahfouz_dev">X(Formerly Twitter)</a></li>
+            <li><a href="https://instagram.com/consuldebayo">Instagram</a></li>
+            <li><a href="https://linkedin.com/in/consuldebayo">LinkedIn</a></li>
+            <li><a href="https://wa.me/09128791157">WhatsApp</a></li>
+        </ul>
+    </div>
+    <div class="copy">&copy; Mahfooz Abubakar 2024.</div>
+</footer>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
